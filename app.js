@@ -2,8 +2,8 @@
 // - restart game
 // - Undo
 
-const ROWS = 2
-const COLUMNS = 2
+let ROWS = 3
+let COLUMNS = 4
 
 let lines
 let squares
@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 function initializeGame() {
+
+    ROWS = +document.getElementById('rows-input').value
+    COLUMNS = +document.getElementById('columns-input').value
 
     document.getElementById('board').innerHTML = ''
     TURN = Math.random() <= 0.5 ? PLAYER_ONE : PLAYER_TWO
