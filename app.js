@@ -28,9 +28,11 @@ function initializeGame() {
 
     ROWS = +document.getElementById('rows-input').value
     COLUMNS = +document.getElementById('columns-input').value
+    TURN = Math.random() <= 0.5 ? PLAYER_ONE : PLAYER_TWO
 
     document.getElementById('board').innerHTML = ''
-    TURN = Math.random() <= 0.5 ? PLAYER_ONE : PLAYER_TWO
+    document.getElementById("turn-label").style.backgroundColor = TURN
+
     R_SCORE = 0
     B_SCORE = 0
 
@@ -68,8 +70,6 @@ function showSquareLabel(i, j) {
 
 
 function createBoardGame() {
-
-
     let offset = 10
     let leftPosition
 
@@ -198,6 +198,7 @@ function drawLine(r, c) {
         }
     }
 
+    document.getElementById("turn-label").style.backgroundColor = TURN
     console.log("%c" + "R = " + R_SCORE + " VS B = " + B_SCORE, "color:yellow")
     console.log('Next turn is ' + TURN)
     // console.table(lines)
