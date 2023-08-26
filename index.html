@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SQUARES</title>
+<script src="./app.js"></script>  
+
+<style> 
+    div#result-bar {
+        background-color: #eaeaea;
+        height: 40px;
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        font-size: 30px;
+        font-family: sans-serif;
+        padding: 6px;
+        border-radius: 5px;
+    }
+    .wrapper-board {
+        white-space: nowrap;
+        overflow: scroll;
+        position: relative;
+    }
+</style>   
+</head>
+<body>
+<div id="result-bar">
+<div id="player-one-score"></div>
+<button id="restart-btn">Restart</button>
+<div id="player-two-score"></div>
+</div>
+<div id="board"></div>
+</body>
+</html>
